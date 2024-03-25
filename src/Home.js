@@ -12,11 +12,12 @@ const Home = () => {
                 'Cards of Things': with React, React Router, Array of
                 Objects, useEffect, useState, useLocation, and passing props through Link tag
               </h1>
-              <div className='favoritePane'>
-                <Favorites/>
-              </div>
+          
+               
+              
               <CardMaker />
             </div>
+            <Favorites>ddfdfdfd</Favorites>
     </div>
   )
 }

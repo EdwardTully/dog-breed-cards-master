@@ -25,7 +25,10 @@ const DogCard = (props) => {
       </div>
       <p className="info">{breedInfo}</p>
       <div className="onSale"> Price: {dogPrice} </div>
-      <button id="submit" onClick={()=>dispatch(addToList(cardTitle))}>Add to Favs</button>
+      <button id="submit" onClick={()=>dispatch(addToList({
+        breed: cardTitle,
+        price: dogPrice
+      }))}>Add to Favs</button>
     
     </div>
   );

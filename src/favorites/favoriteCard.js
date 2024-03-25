@@ -7,21 +7,22 @@ import {remove} from './favoriteSlice'
 const FavoriteCard = (props) => {
 
   const [breed, setBreed] = React.useState();
-  const [ind, setInd]= React.useState()
+  const [price, setPrice]= React.useState()
 
   useEffect(() => {
     setBreed(props.breed);
   }, [props.breed]);
   
     const dispatch = useDispatch()
-  useEffect(()=>{
-    setInd(props.index)
-  },[props.index])
 
-    //there is a problem with props.breed, breed= undefined
+  useEffect(()=>{
+    setPrice(props.price)
+  },[props.price])
+
+   
   return (
     <div className='favCard'>
-        <h3 className='favTitle'>{breed}{ind}</h3>
+        <h3 className='favTitle'>{breed}<br/>{price}</h3>
         <button onClick={()=>dispatch(remove(breed))}>Remove</button>
     </div>
   )

@@ -1,7 +1,10 @@
 import {createSlice} from '@reduxjs/toolkit'
 
 const initialState = {
-    breed: []
+    faves:[ {
+        breed: '',
+        price: ''
+    }]
 }
 
 const favoriteSlice = createSlice({
@@ -9,12 +12,12 @@ const favoriteSlice = createSlice({
     initialState: initialState,
     reducers: {
         addToList: (state, action) =>{
-            state.breed.push(action.payload)
+            state.faves.push(action.payload)
         },
 
-        //when remove everything is removed, and crash occurs
+        //not responding yet
         remove: (state, action)=>{
-           return state.breed.filter((breed)=>breed !== action.payload)
+            state.faves.filter((ea)=>ea.breed !== action.payload)
         }
 
     }
