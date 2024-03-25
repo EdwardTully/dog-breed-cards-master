@@ -2,8 +2,8 @@ import {createSlice} from '@reduxjs/toolkit'
 
 const initialState = {
     faves:[ {
-        breed: '',
-        price: ''
+        breed: 'dog',
+        price: '0'
     }]
 }
 
@@ -17,7 +17,10 @@ const favoriteSlice = createSlice({
 
         //not responding yet
         remove: (state, action)=>{
-            state.faves.filter((ea)=>ea.breed !== action.payload)
+            console.log(action.payload)
+            state.faves.filter((fav)=>fav.breed != action.payload)
+        
+            
         }
 
     }

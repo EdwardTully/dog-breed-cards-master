@@ -22,8 +22,13 @@ const FavoriteCard = (props) => {
    
   return (
     <div className='favCard'>
-        <h3 className='favTitle'>{breed}<br/>{price}</h3>
-        <button onClick={()=>dispatch(remove(breed))}>Remove</button>
+ <button onClick={()=>dispatch(remove(breed))}>Remove</button>
+
+        <p className='favTitle'>{breed}</p>
+        
+        <p>{price}</p>
+        
+       
     </div>
   )
 }

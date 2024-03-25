@@ -111,6 +111,19 @@
   overflow:auto;
 }
 .favoriteBox{
-  background: white;
+  background: gray;
+  display: flex;
+  flex-direction: column;
+ 
+  width: 84%;
+  margin: auto;
+}
+.favCard{
+  width: 50%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  background-color: gray;
+  
 }
 
